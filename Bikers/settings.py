@@ -170,8 +170,10 @@ SIMPLE_JWT = {
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
-CORS_ALLOWED_ORIGINS = [
-    '66.29.131.76',
-    'http://localhost:8443',
-    'http://127.0.0.1:8443'
+
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    "66.29.131.76"
+    # ...
 ]
