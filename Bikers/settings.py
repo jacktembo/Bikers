@@ -137,9 +137,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR/'staticfiles'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR/'media'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -165,14 +165,16 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(hours=30),
 }
 
-
-
 CORS_ALLOW_ALL_ORIGINS = True
-
 
 INTERNAL_IPS = [
     # ...
     "127.0.0.1",
     "66.29.131.76"
     # ...
+]
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://bikers.all1zed.com:8443",
 ]
