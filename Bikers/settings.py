@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-jn0dyjfn!8)d!%c^)m7nv7_oe6nl$slq1k($$lgp9=+(wz@e31
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', '*:*', '*:8443']
+ALLOWED_HOSTS = ['*', '*:*']
 
 # Application definition
 
@@ -169,3 +169,8 @@ SIMPLE_JWT = {
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOWED_ORIGINS = [
+    'https://bikers.all1zed.com:8443',
+    # add any other trusted origins here
+]
