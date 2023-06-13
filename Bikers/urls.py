@@ -16,11 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import views
+
+admin.AdminSite.site_title = 'All1Zed Bikers'
+admin.AdminSite.site_header = 'All1Zed Bikers System'
+admin.AdminSite.index_title = "Welcome To All1Zed Bikers System"
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('djoser.urls')),
     path('api/auth/', include('djoser.urls.authtoken')),
     path('api/auth/', include('djoser.urls.jwt')),
+    path('api/packages', views.PackageList.as_view()),
 ]
-

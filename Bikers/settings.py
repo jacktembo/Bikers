@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-jn0dyjfn!8)d!%c^)m7nv7_oe6nl$slq1k($$lgp9=+(wz@e31'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*', 'bikers.all1zed.com:8443']
 
@@ -65,8 +65,7 @@ ROOT_URLCONF = 'Bikers.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -102,7 +101,7 @@ prod_db = {
     }
 }
 
-DATABASES = prod_db
+DATABASES = dev_db
 
 # Password validation,
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
